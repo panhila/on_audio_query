@@ -60,6 +60,10 @@ class QueryHelper {
                 if (value == "0") return false
                 return true
             }
+            "mime_type" -> {
+                val idx = cursor.getColumnIndex(itemProperty)
+                if (idx < 0) null else cursor.getString(idx)
+            }
             // String
             else -> cursor.getString(cursor.getColumnIndex(itemProperty))
         }

@@ -32,6 +32,7 @@ fun songProjection(): Array<String> {
         MediaStore.Audio.Media.IS_NOTIFICATION,
         MediaStore.Audio.Media.IS_PODCAST,
         MediaStore.Audio.Media.IS_RINGTONE,
+        MediaStore.Audio.Media.MIME_TYPE, //修改
     )
 
     if (Build.VERSION.SDK_INT >= 29) {

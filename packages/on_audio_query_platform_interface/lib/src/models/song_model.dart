@@ -112,6 +112,9 @@ class SongModel {
   /// Return a map with all [keys] and [values] from specific song.
   Map get getMap => _info;
 
+  ///修改： MIME类型，如 audio/mpeg、audio/flac；无则 null
+  String? get mimeType => _info["mime_type"];
+
   @override
   String toString() {
     return _info.toString();
